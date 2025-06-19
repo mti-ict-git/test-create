@@ -28,13 +28,13 @@
       <th>Title</th>
       <th>Status</th>
     </tr>
-    {% for task in tasks %}
+    <% tasks.forEach(function(task) { %>
     <tr>
-      <td>{{ task.id }}</td>
-      <td>{{ task.title }}</td>
-      <td>{{ task.status }}</td>
+      <td><%= task.id %></td>
+      <td><%= task.title %></td>
+      <td><%= task.status %></td>
     </tr>
-    {% endfor %}
+    <% }) %>
   </table>
 </body>
 </html>
